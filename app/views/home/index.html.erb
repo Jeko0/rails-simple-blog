@@ -3,9 +3,7 @@
 <ul>
   <% @post.each do |post| %>
     <li>
-      <a href="/posts/<%= post.id %>">
-        <%= post.title %>
-      </a>
+      <%= link_to post.title, posts_show_path(post)%>
     </li>
   <% end %>
 </ul>
