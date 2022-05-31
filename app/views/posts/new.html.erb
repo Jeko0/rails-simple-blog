@@ -1,0 +1,23 @@
+<h1>Create Post!</h1>
+
+<%= form_with model: @post, url: posts_path, local: true, data: { turbo: false }  do |form| %>
+  <% @post.errors.full_messages.each do |message| %>
+      <div class = "alert alert-danger">
+        <div><%= message %></div>
+      </div>
+  <% end %>
+  
+  <div class="mb-3 w-25">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control", placeholder: "ex: my first trip" %>
+  </div>
+
+  <div class="mb-3 w-25">
+    <%= form.label :content %>
+    <%= form.text_field :content, class: "form-control", placeholder: "describe your trip"%>
+  </div>
+
+  <div class="d-grid gap-2 col-1 mx-auto">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <h1>Sign In!</h1>
+  </head>
+  <body>
+    <%= form_with url: sign_in_path, local: true, data: { turbo: false } do |form|%>
+      <div class="mb-3 w-25">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", placeholder: "example@gmail.com" %>
+      </div>
+
+      <div class="mb-3 w-25">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+      </div>
+
+      <div class="d-grid gap-2 col-1 mx-auto">
+        <%= form.submit "Sign in", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </body>
+</html>
