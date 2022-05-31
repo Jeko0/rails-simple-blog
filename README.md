@@ -1,24 +1,7 @@
-# README
+Simple Rails blog application 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+check your ruby version 
 
-Things you may want to cover:
+clone repo git@github.com:Jeko0/rails-simple-blog.git
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Project is still on deployment
