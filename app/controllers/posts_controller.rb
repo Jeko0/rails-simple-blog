@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :logged_in?
   def new 
     @post = Post.new
   end
