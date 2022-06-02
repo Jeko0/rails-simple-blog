@@ -18,10 +18,12 @@ class PostsController < ApplicationController
   end
 
   def destroy 
-    @post = Post.find_by(id: params[:format])
+    if @post = Post.find_by(id: params[:format], user_id: Current.user.id)
     @post.destroy 
-
     redirect_to root_path, notice: "Post Deleted!"
+    else 
+      redirect_to root_path, alert: "this is not your post"
+    end
   end
 
   private
