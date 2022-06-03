@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   get "/posts", to:"posts#new"
   post "/posts", to:"posts#create"
+  
   get "/posts_show", to:"posts#show"
   delete "/posts_delete", to:"posts#destroy"
 
