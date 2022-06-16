@@ -7,10 +7,10 @@ class UpdatePostsController < ApplicationController
 
   def update 
     post = Post.find_by(id: params[:format])
-    if post.update(post_params)
+    if @post = Post.find_by(id: params[:format], user_id: Current.user.id)
       redirect_to root_path, notice: "Post was updated"
     else
-      render :edit, status: :unprocessable_entity
+      redirect_to root_path, alert: "this is not your post"
     end
   end
 

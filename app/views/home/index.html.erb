@@ -1,9 +1,17 @@
-<h1>Your Posts</h1>
+<h1>Posts</h1>
 
-<ul>
-  <% @post.each do |post| %>
-    <li>
-      <%= link_to post.title, posts_show_path(post)%>
-    </li>
-  <% end %>
-</ul>
+ <% @post.each  do |post|%>
+ <ul class="ui">
+  <li>
+    <div class="meta">
+      <span class="date"> Post title: <strong> <%= post.title%></strong> </span>
+    </div>
+    <div class="extra">
+      <h5> Created by <%= post.user.email %> </h5>
+    </div>
+     <div class="link-to-content">
+      <%= link_to "Read more", posts_show_path(post)%>
+    </div>
+  </li>
+ </ul>
+ <% end %>

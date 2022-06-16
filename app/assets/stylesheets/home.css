@@ -1,0 +1,30 @@
+ul.ui{
+  width: 1200px;
+  margin-top: 20px;
+}
+
+ul.ui li{
+  width: 550px;
+  float: left;
+  margin-left: 30px;
+  list-style-type: none;
+  margin-top: 40px;
+}
+
+h4.header{
+  text-align: center;
+}
+
+div.meta{
+  text-align: center;
+  font-size: large;
+}
+
+div.extra{
+  text-align: center;
+  font-size: small;
+}
+
+div.link-to-content{
+  text-align: center;
+}
